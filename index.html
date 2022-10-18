@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>BMO - UI AODA Test</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+			integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+	</head>
+	<body>
+		<header>
+			<nav id="main-nav" aria-label="Main">
+				<button
+					id="open-nav-menu"
+					class="nav-btn open-btn"
+					aria-expanded="false"
+					aria-controls="navigation-list"
+					aria-label="Show navigation menu"
+					tabindex="0"
+				>
+					<i class="fas fa-bars"></i>
+				</button>
+				<div class="nav nav-black">
+					<div class="nav nav-red">
+						<div class="nav nav-white">
+							<button
+								id="close-nav-menu"
+								class="nav-btn close-btn"
+								aria-expanded="true"
+								aria-label="Hide navigation menu"
+								tabindex="0"
+							>
+								<i class="fas fa-times"></i>
+							</button>
+
+							<img src="/logo.png" alt="logo" class="logo" />
+
+							<ul role="menu" class="list">
+								<li role="none">
+									<a role="menuitem" href="#home">Home</a>
+								</li>
+								<li role="none">
+									<a role="menuitem" href="#about">About</a>
+								</li>
+								<li role="none">
+									<a role="menuitem" href="#banking">Banking</a>
+								</li>
+								<li role="none">
+									<a role="menuitem" href="#hockey">Hockey</a>
+								</li>
+								<li role="none">
+									<a role="menuitem" href="#good-food">Good Food</a>
+								</li>
+								<li role="none">
+									<a role="menuitem" href="#ui-development">UI Development</a>
+								</li>
+								<li role="none">
+									<a role="menuitem" href="#contact">Contact</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<img src="/logo.png" alt="logo" class="logo" />
+			<div class="container">
+				<!-- Form validation -->
+				<form id="form" class="form">
+					<h2>Accessible form</h2>
+					<div class="form-control">
+						<label for="username">Username</label>
+						<input
+							type="text"
+							name="username"
+							id="username"
+							aria-required="true"
+							aria-labelledby="username"
+							placeholder="Enter your username"
+							minlength="3"
+							maxlength="15"
+						/>
+						<small>Error message</small>
+					</div>
+					<div class="form-control">
+						<label for="number">Lucky number</label>
+						<input
+							type="number"
+							name="number"
+							id="number"
+							placeholder="Enter your lucky number"
+							aria-required="true"
+							aria-labelledby="lucky-number"
+						/>
+						<small>Error message</small>
+					</div>
+					<div class="form-control">
+						<label for="email">User email</label>
+						<input
+							type="email"
+							name="email"
+							id="email"
+							placeholder="Enter your email"
+							aria-required="true"
+							aria-labelledby="email"
+						/>
+						<small>Error message</small>
+					</div>
+					<h2>Radio Inputs</h2>
+					<div class="form-control">
+						<fieldset id="fav-language" aria-labelledby="fav_language">
+							<legend>Favorite Language</legend>
+							<label for="html" class="radio-container">
+								<input
+									type="radio"
+									name="fav-language"
+									id="html"
+									tabindex="-1"
+								/>
+								<span
+									role="radio"
+									aria-checked="false"
+									aria-labelledby="fav-language"
+									aria-required="true"
+									tabindex="0"
+									class="checkmark"
+								></span>
+								HTML</label
+							>
+
+							<label for="css" class="radio-container">
+								<input
+									type="radio"
+									name="fav-language"
+									id="css"
+									tabindex="-1"
+								/>
+								<span
+									role="radio"
+									aria-checked="false"
+									aria-labelledby="fav-language"
+									aria-required="true"
+									tabindex="0"
+									class="checkmark"
+								></span>
+								CSS</label
+							>
+
+							<label for="javascript" class="radio-container">
+								<input
+									type="radio"
+									name="fav-language"
+									id="javascript"
+									tabindex="-1"
+								/>
+								<span
+									role="radio"
+									aria-checked="false"
+									aria-labelledby="fav-language"
+									aria-required="true"
+									tabindex="0"
+									class="checkmark"
+								></span>
+								JAVASCRIPT</label
+							>
+						</fieldset>
+					</div>
+
+					<div class="form-control">
+						<label for="multiline" id="comment">Comment:</label>
+						<textarea
+							name="multiline"
+							id="multiline"
+							cols="30"
+							rows="10"
+							placeholder="Leave your comment here..."
+							aria-multiline="true"
+							aria-labelledby="comment"
+						></textarea>
+					</div>
+					<input type="submit" value="Submit" class="submit-btn" />
+				</form>
+			</div>
+
+			<!-- Modal -->
+			<button class="open-modal-btn" id="open">Open Modal</button>
+			<div class="modal-container" id="modal">
+				<div class="modal">
+					<button class="close-modal-btn" id="close" tabindex="0">
+						<i class="fa fa-times"></i>
+					</button>
+					<div class="modal-header">
+						<div>
+							<h3>This is a modal title</h3>
+						</div>
+					</div>
+					<div class="modal-content">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Consequuntur tenetur doloremque sapiente illum possimus inventore,
+						reprehenderit a fuga! Fugiat quae dolores rem deleniti consectetur,
+						similique illo in nulla impedit assumenda, accusantium voluptatum
+						molestias cum praesentium cupiditate, vel minima reprehenderit ex
+						veniam iusto voluptate maiores porro libero excepturi. Incidunt,
+						ipsa tenetur.
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>
